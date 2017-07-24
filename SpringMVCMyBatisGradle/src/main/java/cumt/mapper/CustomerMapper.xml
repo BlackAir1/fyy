@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="cumt.mapper.CustomerMapper">
+	<resultMap type="cumt.domain.Customer" id="customerResultMap">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="password" column="password"/>
+		<result property="qq" colum="qq"/>
+		<collection property="orders" javaType="ArrayList"
+		column="id" ofType="cumt.domain.Customer" select="cumt.mapper.OrderMapper.selectOrderByUserId"
+		fetchType="lazy">
+		<id property="id" column="id"/>
+		<result property="goodsname" column="goodsname"/>
+		<result property="count" column="count"/>
+		<result property="price" column="price"/>
+		<result property="total" column="total"/>
+		<result property="good_id" column="good_id"/>
+		</collection>
+	</resultMap>
+	<select id="selectCustomerById" parameterType="int" resultMap="customerResultMap">
+	SELECT * FROM tb_customer WHERE id = #{id}
+	</select>>
+</mapper>
