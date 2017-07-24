@@ -4,9 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <title>图书购物系统</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
-<script type="text/javascript" src="js/login.js"></script>
-<link href="css/login2.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 
@@ -22,7 +20,7 @@
 	    	<input type="hidden" name="to" value="reg"/>
 		    <input type="hidden" name="did" value="0"/>
         	<ul class="reg_form" id="reg-ul">
-        		<div id="userCue" class="cue">快速注册请注意格式</div>
+        		
              	<li>
                     <label for="user"  class="input-tips2">用户名：</label>
                     <div class="inputOuter2">
@@ -54,7 +52,7 @@
                 <li>
                  <label for="qq" class="input-tips2">email</label>
                     <div class="inputOuter2">
-                        <input type="text" id="qq" name="email" maxlength="20" class="inputstyle2"/>
+                        <input type="text"  name="email"  />
                     </div>
                 </li>
                 
